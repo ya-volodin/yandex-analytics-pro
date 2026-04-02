@@ -1,0 +1,170 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  @apply box-border;
+}
+
+html,
+body {
+  @apply h-full w-full;
+}
+
+body {
+  @apply bg-white text-gray-900 dark:bg-slate-950 dark:text-gray-100;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  @apply h-full w-full;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-slate-500;
+}
+
+/* Cards */
+.card {
+  @apply bg-white dark:bg-slate-900 rounded-lg shadow-card p-4 border border-gray-200 dark:border-slate-800;
+}
+
+.card-lg {
+  @apply bg-white dark:bg-slate-900 rounded-lg shadow-card-lg p-6 border border-gray-200 dark:border-slate-800;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply btn bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700;
+}
+
+.btn-secondary {
+  @apply btn bg-gray-200 dark:bg-slate-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-slate-600;
+}
+
+.btn-danger {
+  @apply btn bg-danger-500 text-white hover:bg-danger-600 active:bg-danger-700;
+}
+
+.btn-ghost {
+  @apply btn bg-transparent text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800;
+}
+
+/* Input fields */
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors;
+}
+
+.input:disabled {
+  @apply bg-gray-100 dark:bg-slate-700 cursor-not-allowed opacity-50;
+}
+
+/* Tables */
+.table {
+  @apply w-full text-sm;
+}
+
+.table th {
+  @apply bg-gray-100 dark:bg-slate-800 px-4 py-2 text-left font-semibold text-gray-900 dark:text-white border-b border-gray-200 dark:border-slate-700;
+}
+
+.table td {
+  @apply px-4 py-2 border-b border-gray-200 dark:border-slate-700;
+}
+
+.table tbody tr:hover {
+  @apply bg-gray-50 dark:bg-slate-800/50;
+}
+
+/* Alerts */
+.alert {
+  @apply p-4 rounded-lg border flex items-start gap-3;
+}
+
+.alert-info {
+  @apply bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-700 text-blue-900 dark:text-blue-200;
+}
+
+.alert-success {
+  @apply bg-success-50 dark:bg-success-900/20 border-success-300 dark:border-success-700 text-success-900 dark:text-success-200;
+}
+
+.alert-warning {
+  @apply bg-warning-50 dark:bg-warning-900/20 border-warning-300 dark:border-warning-700 text-warning-900 dark:text-warning-200;
+}
+
+.alert-danger {
+  @apply bg-danger-50 dark:bg-danger-900/20 border-danger-300 dark:border-danger-700 text-danger-900 dark:text-danger-200;
+}
+
+/* Badges */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200;
+}
+
+.badge-success {
+  @apply bg-success-50 dark:bg-success-900/30 text-success-800 dark:text-success-200;
+}
+
+.badge-warning {
+  @apply bg-warning-50 dark:bg-warning-900/30 text-warning-800 dark:text-warning-200;
+}
+
+.badge-danger {
+  @apply bg-danger-50 dark:bg-danger-900/30 text-danger-800 dark:text-danger-200;
+}
+
+/* Loading */
+.spinner {
+  @apply inline-block animate-spin h-4 w-4 border-2 border-gray-300 dark:border-slate-600 border-t-primary-500 rounded-full;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-slideOut {
+  animation: slideOut 0.3s ease-in;
+}
